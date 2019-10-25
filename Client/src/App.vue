@@ -1,27 +1,28 @@
 <template>
-  <div id="app">
-    <Authentication />
-  </div>
+  <v-app>
+    <v-app-bar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Share</span>
+        <span class="font-weight-light">Desk</span>
+      </v-toolbar-title>
+    </v-app-bar>
+
+    <v-content>
+      <Authentication/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
 import Authentication from './components/Authentication.vue'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    Authentication
-  }
-}
+    Authentication,
+  },
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
